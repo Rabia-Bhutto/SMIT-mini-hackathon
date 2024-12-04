@@ -1,6 +1,45 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-// import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+import {
+  // authenticaion
+  createUserWithEmailAndPassword,
+  // sigin
+  signInWithEmailAndPassword,
+  reauthenticateWithCredential,
+  // Change Detection
+  onAuthStateChanged,
+  // Email Verification
+  sendEmailVerification,
+  // google
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  // manage users
+  signOut,
+  updateProfile,
+  deleteUser,
 
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import {
+  // database
+  where,
+  limit,
+  query,
+  orderBy,
+  serverTimestamp,
+  onSnapshot,
+  getDoc,
+  getDocs,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+  getFirestore,
+  setDoc,
+  doc,
+  collection,
+  addDoc
+}
+  from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA4VWz9LPUFoNS8roYl7hRlUXADEJH3roA",
@@ -16,6 +55,42 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-export{
-    
+export {
+  // authenticaion
+  createUserWithEmailAndPassword,
+  // sigin
+  signInWithEmailAndPassword,
+  reauthenticateWithCredential,
+  // Change Detection
+  onAuthStateChanged,
+  // Email Verification
+  sendEmailVerification,
+  // google
+  // auth,
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  // manage users
+  signOut,
+  updateProfile,
+  deleteUser,
+
+  // Database
+  where,
+  limit,
+  query,
+  orderBy,
+  serverTimestamp,
+  onSnapshot,
+  getDoc,
+  getDocs,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+  getFirestore,
+  setDoc,
+  doc,
+  collection,
+  addDoc,
+  // db
 }
