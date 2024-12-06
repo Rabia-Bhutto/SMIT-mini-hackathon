@@ -3,6 +3,12 @@ import {email, password} from "./signup.js";
 
 const auth = getAuth();
 
+const Pages = {
+  signin: "../Pages/signin.html",
+  blogs: "../Pages/blogs.html",
+  posts: "../Pages/post.html"
+};
+
 let signInPassword = document.getElementById("signInPassword")
 let  signInEmail = document.getElementById("signInEmail")
 
@@ -14,7 +20,7 @@ loginBtn && loginBtn.addEventListener("click", () => {
       .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
-          window.location.href = "profile.html";
+          window.location.href = "blogs.html";
       })
       .catch((error) => {
           const errorCode = error.code;
@@ -45,7 +51,7 @@ document.getElementById("signinForm").addEventListener("submit", function (event
   // location.href = "profile.html";
   if (signInEmail === email){
     if (signInPassword === password){
-      location.href = "profile.html";
+      location.href = "blogs.html";
     }
   }
   else{

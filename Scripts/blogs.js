@@ -27,6 +27,8 @@ import {
 let addingPost = document.getElementById("posting");
 // let createPost = document.getElementById("create-post");
 
+
+
 addingPost && addingPost.addEventListener("click", async () => {
   console.log("hi");
   let titleValue = document.getElementById("postTitle").value;

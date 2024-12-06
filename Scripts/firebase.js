@@ -41,6 +41,7 @@ import {
 }
   from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyA4VWz9LPUFoNS8roYl7hRlUXADEJH3roA",
   authDomain: "smit-mini-hackathon-4-12-24.firebaseapp.com",
@@ -51,9 +52,10 @@ const firebaseConfig = {
   measurementId: "G-0T1CQLH67C"
 };
 
-
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
 
 export {
   // authenticaion
@@ -66,7 +68,7 @@ export {
   // Email Verification
   sendEmailVerification,
   // google
-  // auth,
+  auth,
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
@@ -92,5 +94,5 @@ export {
   doc,
   collection,
   addDoc,
-  // db
+  db
 }
